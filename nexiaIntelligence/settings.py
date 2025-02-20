@@ -121,3 +121,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#========================================================================
+
+LOGIN_URL = 'login' #this is name of url pattern This setting defines the URL where users will be redirected if they try to access a view that requires authentication.Without this, Django uses the default '/accounts/login/', but setting it to 'login' makes it easier to reference the named URL pattern.
+LOGOUT_REDIRECT_URL = 'login'  # URL name for login page. This determines where the user will be sent after logging out. Setting it to 'login' ensures the user is redirected to the login page.
+LOGIN_REDIRECT_URL = 'nexiaIntelligenceHome' ## LOGIN_REDIRECT_URL defines where users are redirected after logging in.If not set, Django will default to redirecting users to the URL of '/accounts/profile/',which may result in a 404 error if that path is not configured in your URLs.Set it to a valid URL pattern name (e.g., 'nexiaIntelligenceHome') 
