@@ -6,7 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nexiaIntelligence.settings')
+    settings_module = 'nexiaIntelligence.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'nexiaIntelligence.settings'
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
