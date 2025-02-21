@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexia Intelligence Home</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1>Welcome to Nexia Intelligence!</h1>
 
-    <form method="POST" action="{% url 'logout' %}">
+    <h2>Login to your account</h2>
+
+    <form method="post">
         {% csrf_token %}
-        <button type="submit">Logout</button>
+        {{ form.as_p }}
+        <button type="submit">Login</button>
     </form>
-    
 </body>
 </html>
