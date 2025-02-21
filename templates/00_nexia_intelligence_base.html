@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Title -->
+        <title>Nexia Intelligence</title>
+        <link rel="icon" href="{% static 'images/02_logos/TO_DELETE/Nexia Links logo RGB.png' %}" type="image/x-icon">
+
+        <!-- Stylesheets -->
+        <!-- 1.1 Bootstrap 5 CSS-->
+        <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css' %}">
+
+        <!-- 1.2 Bootstrap 5 Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <!-- 2. Custom Style Sheet -->
+        <link rel="stylesheet" href="{% static 'css/master.css' %}">
+
+        <!-- 3. Stylesheet from source file -->
+        {% block css_block %}
+        {% endblock %}
+
+        <!-- 4. Font awesome -->
+        <script src="https://kit.fontawesome.com/401f6b4884.js" crossorigin="anonymous"></script>
+
+        <!-- 5. Lordicon -->
+        <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+
+        <!-- 6. Table Js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <link rel="stylesheet"href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+        <script type="text/javascript"src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+
+        {% block script_block_header %}
+        {% endblock %}
+
+        {% block style_block_header %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div class="row row_body" id="row_body">
+            <!-- Sidebar -->
+            <div class="col-1 mainbody_col sidebar" id="sidebar_div">
+                {% block sidebar_block %}
+                {% endblock %}
+            </div>
+            <!-- End Sidebar -->
+            <!-- Main Body -->
+            <div class="col mainbody_col mainbodycontent p-0" id="mainbodycontent">
+                <!-- TitleBlock -->
+                <div class="title_block">
+                    <h2 class="pt-4 px-4">
+                        {% block titleblock %}
+                        {% endblock %}
+                    </h2>
+
+                    <div class="title_underline mx-4" style="height: 5px; background-image: linear-gradient(to right, rgba(0,185,185,1), rgba(0,185,185,0.5),rgba(0,50,60,1));">
+                        <hr style="height: 5px;background-image: linear-gradient(to right, rgba(0,185,185,1), rgba(0,185,185,0.5), rgba(0,50,60,1));">
+                    </div>
+                </div>
+                <br>
+                <!-- End of TitleBlock -->
+
+                <!-- BodyBlock -->
+                <div class="mainbody pt-0 p-4" id="body_block">
+                    {% block bodyblock %}
+                    {% endblock %}
+                </div>
+                <br><br><br>
+                <!-- End of BodyBlock -->
+
+                <!-- Footer -->
+
+                <div class="footer pb-3 pt-3 position-fixed text-center" style="position: fixed; bottom: 4%;  width: 100%; max-width: 84vw; background-color: whitesmoke; font-size: 12px;  border-radius:  0 0 12px 25px; word-wrap: break-word; overflow-wrap: break-word;height: auto;line-height: normal">
+                    © 2024 Nexia International Limited. All rights reserved. The trademarks NEXIA INTERNATIONAL, NEXIA, and the NEXIA logo are owned by Nexia International Limited.
+                </div>
+
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End Main Body -->
+
+        </div>
+
+        <!-- Javascript -->
+
+        <!-- 2. Script from source file -->
+        <script src="{% static 'js/master.js' %}"></script>
+
+        <!-- 3. Script from custom source file -->
+        {% block script_block %}
+        {% endblock %}
+
+        <!-- 4. Bootstrap 5 -->
+        <!-- 4.1 Bootstrap 5 min JS-->
+        <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- 4.2 Bootstrap 5 popper min JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <!-- 5. Tooltip and Sidebar collapse script -->
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+            var row_body = document.getElementById('row_body');
+            var sidebar_div = document.getElementById("sidebar_div");
+            var main_body = document.getElementById('mainbodycontent');
+            var sidebar_hamburger = document.getElementById("sidebar_hamburger");
+
+            sidebar_div.style.width = "12vw";
+            sidebar_div.style.maxWidth = "12vw";
+
+            main_body.style.width = "88vw";
+            main_body.style.maxWidth = "88vw";
+
+            function sidebar() {
+                var row_body = document.getElementById('row_body');
+                var sidebar_div = document.getElementById("sidebar_div");
+                var main_body = document.getElementById('mainbodycontent');
+                var sidebar_hamburger = document.getElementById("sidebar_hamburger");
+
+                console.log(sidebar_hamburger.classList);
+
+                if (sidebar_hamburger.classList.contains('minimised')){
+                    console.log("To expand");
+                    sidebar_hamburger.classList.remove('minimised');
+                    sidebar_hamburger.classList.add('expanded');
+                    sidebar_div.style.width="12vw";
+                    sidebar_div.style.maxWidth="12vw";
+
+                    main_body.style.width="88vw";
+                    main_body.style.maxWidth="88vw";
+
+                    console.log("sidebar_hamburger.clientWidth ", sidebar_hamburger.clientWidth)
+                    console.log("Sidebar Width: ", sidebar_div.style.width);
+                    console.log("Sidebar Max Width: ", sidebar_div.style.maxWidth);
+
+                    console.log("Main body Width: ", main_body.style.width);
+                    console.log("Main body Max Width: ", main_body.style.maxWidth);
+                } else {
+                    console.log("To minimise");
+                    sidebar_hamburger.classList.remove('expanded');
+                    sidebar_hamburger.classList.add('minimised');
+                    sidebar_div.style.width=2.2*sidebar_hamburger.clientWidth+"px";
+                    sidebar_div.style.maxWidth=2.2*sidebar_hamburger.clientWidth+"px";
+
+                    main_body.style.width=row_body.clientWidth-sidebar_div.clientWidth+"px";
+                    main_body.style.maxWidth=row_body.clientWidth-sidebar_div.clientWidth+"px";
+
+                    console.log("Width: ", sidebar_div.style.width);
+                    console.log("Max Width: ", sidebar_div.style.maxWidth);
+
+                    console.log("Main body Width: ", main_body.style.width);
+                    console.log("Main body Max Width: ", main_body.style.maxWidth);
+
+                }
+            }
+        </script>
+    </body>
+</html>

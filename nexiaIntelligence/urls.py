@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.contrib.auth import views as auth_views
+
+from app00Administration.views_00_login import CustomLoginView, CustomLogoutView
 
 
 from .views import nexiaIntelligenceHomeView
@@ -24,6 +26,16 @@ from .views import nexiaIntelligenceHomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', nexiaIntelligenceHomeView.as_view(), name='nexiaIntelligenceHome'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('login/', CustomLoginView.as_view(), name='login'),
+    path('logout/', CustomLogoutView.as_view(), name='logout'),
+    path('captcha/', include('captcha.urls')),
+
+    
+    # --------------------------------------------------------
+    #                           APPLICATIONS
+    # --------------------------------------------------------
+
+    # 00. Administration
+    path('administration/', include('app00Administration.urls'), name='administration'),
+
 ]
