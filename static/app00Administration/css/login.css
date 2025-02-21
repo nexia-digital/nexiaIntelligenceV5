@@ -1,0 +1,118 @@
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 99vw;
+  /*min-height: 100%;*/
+}
+
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+body {
+    /*background-color: lightgray;*/
+    font-family: Tahoma, sans-serif;
+    color: #00323C;
+}
+.login_background_image{
+    position: fixed;
+    background-position-x: right;
+    background-position-y: bottom;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-box {
+    color: white;
+    padding: 3%;
+    border-radius: 25px;
+    max-width: 30vw;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(245,245,245,0.5);
+    /*background-color: whitesmoke;*/
+}
+
+/* ----------------Buttons - submit, cancel, etc---------------- */
+.btn-light{
+    background-color: #00B9B9;
+    color: white;
+    border-style: none;
+}
+
+.btn-light:focus,
+.btn-light:active {
+    background-color: #00B9B9; /* Keep the same background */
+    color: white;  
+    outline: none; 
+}
+.btn-light:hover{
+    background-color: #00B9B9;
+    color: white;
+    border-style: none;
+}
+
+.btn-danger{
+    background-color: #CA1C66;
+   
+}
+.btn-danger:hover{
+    background-color: rgba(202,28,102,0.8);
+}
+
+.form-check-input:checked {
+    background-color: #00B9B9;
+    border-color: #00B9B9;
+}
+.container-fluid.login-box {
+    height: 92vh;  
+    overflow-y: auto;  /* Makes the container scrollable */
+    padding: 30px;
+}
+
+.modal-body {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 2px;
+
+    /* background-color: #dfdddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+
+.section-heading {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    
+}
+
+.section-list {
+    list-style: circle;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.section-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.modal-dialog-centered {
+  
+    align-items: center;
+    justify-content: center;
+   
+}
+button:focus {
+    outline: none;
+}
+
