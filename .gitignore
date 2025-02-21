@@ -22,8 +22,8 @@ media/
 .vscode/
 
 # Ignore migrations (optional, useful for clean environments)
-**/migrations/*.py
-**/migrations/*.pyc
+# **/migrations/*.py
+# **/migrations/*.pyc
 
 # Ignore compiled Python files
 *.pyc
