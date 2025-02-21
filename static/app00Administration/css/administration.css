@@ -1,0 +1,62 @@
+
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+body {
+    /*background-color: lightgray;*/
+    font-family: Tahoma, sans-serif;
+    color: #00323C;
+}
+.contentblock{
+    /*background-color: rgba(255,255,255,0.85);*/
+    /*border-radius: 25px;*/
+    /*padding: 2%;*/
+    /*color: black;*/
+    overflow: auto;
+}
+
+
+
+
+
+/*-------------------------------- View Firms  ---------------------------------*/
+
+table{
+    /*color: white;*/
+    border-radius: 25px;
+}
+
+td .desc_cell {
+    min-width: 150px;
+}
+thead > tr{
+    background-color: #01272c;
+    color: white;
+}
+
+tbody > tr > td{
+    font-size: medium;
+    color: #01272c;
+}
+
+.title_block {
+    position: sticky;
+    top: 0;
+    background: whitesmoke;
+
+    z-index: 997;
+}
+
+.table thead {
+    position: sticky;
+    top: 0px;
+    background: #f8f9fa;
+    z-index: 999;
+}
+
+/*-------------------------------- End of View Register Table View ---------------------------------*/
+

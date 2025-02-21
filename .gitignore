@@ -25,6 +25,9 @@ media/
 # **/migrations/*.py
 # **/migrations/*.pyc
 
+# Ignore migration caches
+*/migrations/__pycache__/
+
 # Ignore compiled Python files
 *.pyc
 *.pyo

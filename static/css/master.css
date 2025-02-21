@@ -1,0 +1,338 @@
+
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+body {
+    /*background-color: lightgray;*/
+    font-family: Tahoma, sans-serif;
+    color: #00323C;
+}
+
+#row_body {
+    background-color: lightgray;
+    width: available;
+    height: 98vh;
+    margin: 0%;
+    overflow: auto;
+}
+
+/* ----------------Sidebar---------------- */
+
+.sidebar {
+    width: 12vw;
+    max-width: 12vw;
+    /* height: auto; */
+    height: 95vh;
+    margin: 0.5%;
+    border-radius: 25px;
+    /*margin: 1%;*/
+
+    background-color: #00323C;
+    background-image: linear-gradient(to bottom, rgba(0, 185, 185, 1), rgba(0, 50, 60, 1));
+    color: white;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.sidebar:hover {
+    overflow: auto;
+}
+
+.sidebar_background_image {
+    position: fixed;
+}
+
+img.sidebar_logo {
+    width: 10vw;
+    text-align: center;
+    align-content: center;
+    padding: 2vw 0.5vw 1vw;
+}
+
+
+ul.list-unstyled {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */
+    text-decoration: none;
+}
+
+button.level_1,
+a.level_2 {
+    color: white;
+    align-content: start;
+    text-align: start;
+}
+
+button+.level_1 {
+    font-size: medium;
+}
+
+button.level_1:hover,
+a.level_2:hover {
+    color: lightgray;
+}
+
+.level_2 {
+    margin-left: 8px;
+    color: white;
+}
+
+a.level_2 {
+    font-size: small;
+    text-decoration: none;
+    color: white;
+}
+
+/* ----------------End of Sidebar---------------- */
+
+/* ----------------Mainbody---------------- */
+
+.mainbodycontent {
+    height: 95vh;
+    max-width: 88vw;
+    width: 88vw;
+    margin: 0.5%;
+    overflow: auto;
+
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 25px;
+    padding: 2% 3%;
+
+    /*box-shadow: 10px 10px 5px grey;*/
+}
+
+.body_block {
+    overflow: auto;
+}
+
+/* ----------------End of Mainbody---------------- */
+
+/* ----------------Buttons - submit, cancel, etc---------------- */
+
+.btn {
+    font-size: small;
+}
+
+.btn-light {
+    background-color: #00B9B9;
+    border-color: whitesmoke;
+    color: white;
+}
+
+.btn-light:hover {
+    background-color: rgba(0, 185, 185, 0.8);
+    color: white;
+}
+
+.btn-tooltip {
+    background-color: #00323C;
+    color: white;
+}
+.btn-tooltip:hover {
+    background-color: #00323C;
+    color: white;
+}
+
+
+.btn-tooltippresent {
+    background-color: #e0093b;
+    color: white;
+}
+.btn-tooltippresent:hover {
+    background-color: #e0093b;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #CA1C66;
+    border-color: whitesmoke;
+    color: white;
+    /*background-color: rgba(202,28,102,1);*/
+}
+
+.btn-danger:hover {
+    background-color: rgba(202, 28, 102, 0.8);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: rgba(25, 133, 195, 1);
+    border-color: whitesmoke;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(25, 133, 195, 0.8);
+    color: white;
+}
+
+.btn-secondary:disabled {
+    background-color: rgba(25, 133, 195, 0.4);
+    color: grey;
+}
+
+.btn-info {
+    background-color: rgba(237, 144, 52, 1);
+    border-color: whitesmoke;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: rgba(237, 144, 52, 0.8);
+    color: white;
+}
+
+.btn-info:disabled {
+    background-color: rgba(237, 144, 52, 0.4);
+    color: grey;
+}
+
+
+
+
+/* ----------------Checkboxes---------------- */
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: green;
+}
+
+.custom-checkbox .custom-control-input:checked:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+}
+
+.custom-checkbox .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+}
+
+.custom-checkbox .custom-control-input:active~.custom-control-label::before {
+    background-color: #C8FFC8;
+}
+
+
+/* ----------------End of Checkboxes---------------- */
+
+
+/* ----------------Tables---------------- */
+
+.table {
+    font-size: small;
+}
+/* ----------------End of Tables---------------- */
+
+
+
+
+.title_block {
+    position: sticky;
+    top: 0;
+    background: whitesmoke;
+
+    z-index: 999;
+}
+
+
+.btn-custom-SideBar {
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.btn-custom-SideBar i {
+    margin-right: 8px;
+}
+.table thead {
+    position: sticky;
+    top: 0px;
+    background: #f8f9fa;
+    z-index: 999;
+}
+
+.table.tests-selection-table thead {
+    position: sticky;
+    top: -18px;
+    background: #f8f9fa;
+    z-index: 999;
+}
+
+.tooltip {
+    z-index: 2000;  /*  the tooltip is above other elements */
+}
+
+
+.circle-label {
+    display: inline-block;
+    width: 35px;              
+    height: 35px;
+    text-align: center;
+    line-height: 35px;        /* This centers the text vertically */
+    border-radius: 50%;       /* This makes the label circular */
+    background-color: #42a9b0; 
+    color: white;             /*  text color */
+    font-weight: bold;        
+    font-size: 14px;          
+    /* margin-right: 0; 
+    margin-bottom: 20px;
+    margin-left: 20px; */
+    margin: 10px 0 10px 20px;
+}
+.checkbox-label {
+    margin: 15px 0 15px 0px;
+}
+
+
+.pre-keyword-table {
+    margin: 15px;
+}
+
+.pre-keyword-table td {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.user-keyword-table td {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    
+}
+
+.manual-identifier-table td {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    margin-left: 0;
+}
+.control-identifier-table td {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.tests-selection-table td {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    /* border-bottom: 1px solid #000; */
+    border-bottom: 1px solid#e6e6e6;
+    border-collapse: collapse;
+}
+.form-check-input:checked {
+    background-color: #42a9b0;
+    border-color: #42a9b0;
+}
