@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Django-specific files
+db.sqlite3
+*.log
+local_settings.py
+.env
+*.pem
+
+# Ignore static and media files (if generated dynamically)
+staticfiles/
+media/
+
+# VS Code settings (optional)
+.vscode/
+
+# Ignore migrations (optional, useful for clean environments)
+**/migrations/*.py
+**/migrations/*.pyc
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+
+# Ignore node_modules if using frontend dependencies
+node_modules/
+
+# Ignore Docker-related files
+*.dockerfile
+docker-compose.override.yml
+
+# Ignore IDE and editor files
+.idea/
+*.swp
+*.swo
+
+# Ignore Azure DevOps pipeline files
+azure-pipelines.yml
+azure-pipelines/*.yml
