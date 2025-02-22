@@ -14,9 +14,9 @@ local_settings.py
 .env
 *.pem
 
-# Ignore static and media files (if generated dynamically)
-staticfiles/
-media/
+# # Ignore static and media files (if generated dynamically)
+# staticfiles/
+# media/
 
 # VS Code settings (optional)
 .vscode/
